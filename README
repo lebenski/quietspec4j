@@ -1,1 +1,4 @@
 Java Adapter for the QuietSpeculation.com API
+=============================================
+
+This project uses Apache HttpClient, Jackson and Google Guice.

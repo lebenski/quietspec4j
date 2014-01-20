@@ -1,7 +1,7 @@
 package com.cubetutor.quietspec4j.service;
 
 import com.cubetutor.quietspec4j.exception.QuietSpec4JException;
-import com.cubetutor.quietspec4j.model.BlocksAndSets;
+import com.cubetutor.quietspec4j.model.sets.BlocksAndSets;
 
 public interface SetsService {
 

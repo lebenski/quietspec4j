@@ -4,7 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
 import com.cubetutor.quietspec4j.exception.QuietSpec4JException;
-import com.cubetutor.quietspec4j.model.BlocksAndSets;
+import com.cubetutor.quietspec4j.model.sets.BlocksAndSets;
 import com.cubetutor.quietspec4j.service.QuietSpecHttpConnector;
 import com.cubetutor.quietspec4j.service.SetsService;
 import com.fasterxml.jackson.databind.DeserializationConfig;

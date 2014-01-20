@@ -1,4 +1,4 @@
-package com.cubetutor.quietspec4j.model;
+package com.cubetutor.quietspec4j.model.sets;
 
 import java.util.Date;
 

@@ -42,6 +42,8 @@ public class QuietSpectHttpConnectorImpl implements QuietSpecHttpConnector {
 
 		String responseString = result.toString();
 		
+		System.out.println(responseString);
+		
 		if(responseString.startsWith("{\"fault\"")) {
 			throw new QuietSpec4JException("QuietSpec Fault: "+responseString);
 		}
