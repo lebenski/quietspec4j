@@ -1,24 +1,20 @@
 package com.cubetutor.quietspec4j.model;
 
+import java.util.Date;
+
 public class Set {
 
 	private String name;
-	private String releaseDate;
 	private String setCode;
 	private String setSymbol;
 	private Integer blockId;
+	private Date releaseDate;
 	
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getReleaseDate() {
-		return releaseDate;
-	}
-	public void setReleaseDate(String releaseDate) {
-		this.releaseDate = releaseDate;
 	}
 	public String getSetCode() {
 		return setCode;
@@ -38,4 +34,11 @@ public class Set {
 	public void setBlockId(Integer blockId) {
 		this.blockId = blockId;
 	}
+	public Date getReleaseDate() {
+		return releaseDate;
+	}
+	public void setReleaseDate(Date releaseDate) {
+		this.releaseDate = releaseDate;
+	}
+	
 }
