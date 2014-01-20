@@ -1,8 +1,8 @@
-package com.cubetutor.quietspec4j.model;
+package com.cubetutor.quietspec4j.model.fault;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Detail {
+public class FaultDetail {
 
 	@JsonProperty("errorcode")
 	private String errorCode;

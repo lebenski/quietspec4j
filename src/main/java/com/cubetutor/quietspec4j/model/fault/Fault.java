@@ -1,4 +1,4 @@
-package com.cubetutor.quietspec4j.model;
+package com.cubetutor.quietspec4j.model.fault;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonRootName;
@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonRootName;
 public class Fault {
 
 	private String faultString;
-	private Detail detail;
+	private FaultDetail detail;
 	
 	public String getFaultString() {
 		return faultString;
@@ -18,12 +18,12 @@ public class Fault {
 		this.faultString = faultString;
 	}
 	
-	public Detail getDetail() {
+	public FaultDetail getDetail() {
 		return detail;
 	}
 	
 	@JsonProperty("detail")
-	public void setDetail(Detail detail) {
+	public void setDetail(FaultDetail detail) {
 		this.detail = detail;
 	}
 

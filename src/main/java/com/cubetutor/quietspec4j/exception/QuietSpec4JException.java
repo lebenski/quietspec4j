@@ -7,4 +7,8 @@ public class QuietSpec4JException extends Throwable {
 	public QuietSpec4JException(Throwable e) {
 		super(e);
 	}
+	
+	public QuietSpec4JException(String message) {
+		super(message);
+	}
 }

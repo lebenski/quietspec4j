@@ -10,6 +10,7 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 
+import com.cubetutor.quietspec4j.exception.QuietSpec4JException;
 import com.cubetutor.quietspec4j.service.QuietSpecHttpConnector;
 import com.google.inject.Inject;
 import com.google.inject.name.Named;
@@ -23,7 +24,7 @@ public class QuietSpectHttpConnectorImpl implements QuietSpecHttpConnector {
 		this.apiKey = apiKey;
 	}
 	
-	public String makeRequest(String uri) throws ClientProtocolException, IOException, IllegalStateException {
+	public String makeRequest(String uri) throws ClientProtocolException, IOException, IllegalStateException, QuietSpec4JException {
 		HttpClient client = new DefaultHttpClient();
 		HttpGet get = new HttpGet(addApiKey(uri));
 		
@@ -39,13 +40,17 @@ public class QuietSpectHttpConnectorImpl implements QuietSpecHttpConnector {
 		    result.append(line);
 		}
 
-		return result.toString();
+		String responseString = result.toString();
+		
+		if(responseString.startsWith("{\"fault\"")) {
+			throw new QuietSpec4JException("QuietSpec Fault: "+responseString);
+		}
+		
+		return responseString;
 	}
 
 	private String addApiKey(String uri) {
-		
-		return uri;
-		//return uri + "?apikey="+apiKey;
+		return uri + "?apikey="+apiKey;
 	}
 
 }

@@ -2,20 +2,14 @@ package com.cubetutor.quietspec4j.model;
 
 public class Block {
 	
-	private Integer name;
+	private String name;
 	private Integer id;
-	
-	public Block(Integer name, Integer id) {
-		super();
-		this.name = name;
-		this.id = id;
-	}
 
-	public Integer getName() {
+	public String getName() {
 		return name;
 	}
 
-	public void setName(Integer name) {
+	public void setName(String name) {
 		this.name = name;
 	}
 
