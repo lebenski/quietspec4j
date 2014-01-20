@@ -3,7 +3,9 @@ package com.cubetutor.quietspec4j.module;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.cubetutor.quietspec4j.service.QuietSpecHttpConnector;
 import com.cubetutor.quietspec4j.service.SetsService;
+import com.cubetutor.quietspec4j.service.impl.QuietSpectHttpConnectorImpl;
 import com.cubetutor.quietspec4j.service.impl.SetsServiceImpl;
 import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
@@ -20,6 +22,7 @@ public class QuietSpec4JModule extends AbstractModule  {
 	protected void configure() {
 	    bindProperties();
 	    bind(SetsService.class).to(SetsServiceImpl.class);
+	    bind(QuietSpecHttpConnector.class).to(QuietSpectHttpConnectorImpl.class);
 	}
 
 	private void bindProperties() {

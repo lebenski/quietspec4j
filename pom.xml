@@ -1,24 +1,51 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.cubetutor</groupId>
-  <artifactId>quietspec4j</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
+	<groupId>com.cubetutor</groupId>
+	<artifactId>quietspec4j</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
 
-  <name>quietspec4j</name>
-  <url>http://maven.apache.org</url>
+	<name>quietspec4j</name>
+	<url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-  <dependencies>
+	<dependencies>
 		<dependency>
 			<groupId>com.google.inject</groupId>
 			<artifactId>guice</artifactId>
 			<version>3.0</version>
 		</dependency>
-  </dependencies>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.2.1</version>
+		</dependency>
+ <!-- the core, which includes Streaming API, shared low-level abstractions (but NOT data-binding) -->
+ <dependency>
+   <groupId>com.fasterxml.jackson.core</groupId>
+   <artifactId>jackson-core</artifactId>
+   <version>2.3.0</version>
+ </dependency>
+
+ <!-- Just the annotations; use this dependency if you want to attach annotations
+      to classes without connecting them to the code. -->
+ <dependency>
+   <groupId>com.fasterxml.jackson.core</groupId>
+   <artifactId>jackson-annotations</artifactId>
+   <version>2.3.0</version>
+</dependency>
+
+<!-- databinding; ObjectMapper, JsonNode and related classes are here -->
+<dependency>
+  <groupId>com.fasterxml.jackson.core</groupId>
+  <artifactId>jackson-databind</artifactId>
+  <version>2.3.0</version>
+</dependency>
+
+	</dependencies>
 </project>
