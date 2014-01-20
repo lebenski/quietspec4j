@@ -1,4 +1,41 @@
-Java Adapter for the QuietSpeculation.com API
-=============================================
+QuietSpec4J - Java Adapter for the QuietSpeculation.com API
+===========================================================
 
 This project uses Apache HttpClient, Jackson and Google Guice.
+
+Initialisation
+==============
+
+final String MY_API_KEY = "myuZXB279hAtfE5uaeXMLAHq5NctrZ9G";
+QuietSpec4JIntialiser initialiser = new QuietSpec4JIntialiser(MY_API_KEY);
+
+Sample Usage
+============
+
+Get all blocks and sets:
+
+SetsService setsService = initialiser.getSetsService();
+BlocksAndSets blocksAndSets = setsService.getAllBlocksAndSets();
+
+Get all prices for Lightning Bolt:
+
+CardPricesService cardPricesService = initialiser.getCardPricesService();
+List<CardPrice> cardPrices = cardPricesService.getCardPrices("Lightning Bolt");
+
+Get all foil sell prices for Lightning Bolt:
+
+List<CardPriceFilter> filters = new ArrayList<CardPriceFilter>();
+filters.add(new FoilFilter(true));
+filters.add(new ActionFilter(CardPriceAction.SELL));
+List<CardPrice> cardPrices = cardPricesService.getCardPrices("Lightning Bolt", filters);
+
+Available Filters
+=================
+
+You can use as many filtersd as you like when asking QuietSpec4J for card prices.  More coming soon.
+
+new FoilFilter(true | false) - Foil or Non Foil Cards
+new ActionFilter(CardPriceAction.BUY | CardPriceAction.SELL) - Buy or Sell prices
+new MerchantNameFilter("MERCHANT_NAME") - Merchant Name
+
+
