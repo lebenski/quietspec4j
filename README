@@ -6,7 +6,7 @@ This project uses Apache HttpClient, Jackson and Google Guice.
 Initialisation
 ==============
 
-final String MY_API_KEY = "myuZXB279hAtfE5uaeXMLAHq5NctrZ9G";
+final String MY_API_KEY = "my.key";
 QuietSpec4JIntialiser initialiser = new QuietSpec4JIntialiser(MY_API_KEY);
 
 Sample Usage
